@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\userController;
+// use App\Http\Controllers\userController;
+use App\Http\Controllers\uploadController;
 
 // Route::get('/user',[UserControler::class,'index']);
 // Route::get('/add-user',[UserControler::class,'addUser']);
@@ -17,7 +18,9 @@ use App\Http\Controllers\userController;
 // Route::get('/about/{name}', function ($name) {
 //     return view("about",["name"=>$name]);
 // });
-Route::view("/","add-user");
-Route::get("/add-user",[userController::class,'addUser']);
+// Route::view("/","add-user");
+// Route::get("/add-user",[userController::class,'addUser']);
+Route::view("/","upload");
+Route::post("/upload",[uploadController::class,"upload"]);
 
 
